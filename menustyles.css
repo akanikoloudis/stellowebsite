@@ -1,0 +1,73 @@
+/* make the page fill the viewport & use a gentle background */
+html, body {
+    height: 100%;
+    margin: 0;
+    background: #f5f5f5;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* center that container horizontally & vertically */
+  .menu-page {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+/* center & fix the total button‐row width */
+.button-container {
+    display: flex;
+    gap: 1.5rem;
+    width: 360px;             /* total space for both buttons */
+    margin: 0 auto;           /* center the container itself */
+  }
+  
+  /* let each button share that 360px equally */
+  .tab-button {
+    flex: 1;                  /* grow & shrink equally */
+    padding: 1rem 0;          /* only vertical padding now */
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    background: #fff;
+    border: 2px solid #333;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition:
+      background 0.2s ease,
+      color 0.2s ease,
+      transform 0.15s ease,
+      box-shadow 0.15s ease;
+  }
+  
+  /* hover/focus state */
+  .tab-button:hover,
+  .tab-button:focus {
+    background: #333;
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    outline: none;
+  }
+  
+  /* active state */
+  .tab-button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  }
+
+  .image-list {
+    max-width: 800px;        /* or whatever width you like */
+    margin: 2rem auto;       /* center in viewport */
+    padding: 0 1rem;
+  }
+  
+  .image-list img {
+    display: block;          /* each on its own line */
+    width: 100%;             /* fill container */
+    height: auto;
+    margin-bottom: 1.5rem;   /* space between */
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
