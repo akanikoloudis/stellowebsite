@@ -271,7 +271,7 @@ img{display:block;width:100%;height:100%;object-fit:cover}
   margin-left:auto;margin-right:auto;
 }
 .intro-rule{
-  width:1px;height:60px;
+  width:1px;height:40px;
   background:linear-gradient(to bottom,transparent,var(--sand),transparent);
   margin:3rem auto;
 }
@@ -289,6 +289,13 @@ img{display:block;width:100%;height:100%;object-fit:cover}
   overflow:hidden;
   background:var(--sand);
   /* placeholder until image added */
+}
+.split-img img{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
 }
 .split-img .ph{
   position:absolute;inset:0;
@@ -734,18 +741,15 @@ footer{
     <span class="section-label">Thassos, Greece</span>
     <h2>A gathering place<br>for those who live<br><em>close to the sea</em></h2>
     <div class="intro-rule"></div>
-    <p>Stello is an open-air restaurant on the edge of Thassos island. We cook with the morning's catch, the island's soil and an honest love of feeding people well. Simple food in a place that takes your breath away.</p>
+    <p>Between sea and mountain, in the heart of Thassos, Stello has been crafting soulful dishes since 1979. Born from yaya Meni’s hands and inspired by the island’s beauty, we serve more than food—we offer a journey.</p>
+    <p>Step into our world of seasonal Mediterranean flavors, local tradition, and carefully curated Greek wines. Every dish is a story. Every detail, an invitation to slow down and savour.</p>
   </div>
 </section>
 
 <!-- ═══ SPLIT 1 — THE PLACE ═══════════════════════════════════ -->
 <div class="split rv">
   <div class="split-img">
-    <!--
-      ── IMAGE SLOT 1 ─────────────────────────────────────────
-      <img src="terrace.jpg" alt="Stello terrace" />
-    -->
-    <div class="ph" style="background:#CDDDE3">Image — terrace or sea view</div>
+    <img src="images/website_1.JPG" alt="Stello terrace" />
   </div>
   <div class="split-body">
     <span class="section-label">The Place</span>
@@ -762,10 +766,7 @@ footer{
 <!-- ═══ FULL BLEED 1 ══════════════════════════════════════════ -->
 <div class="fb rv">
   <div class="fb-bg">
-    <!--
-      ── IMAGE / VIDEO SLOT 2 ──────────────────────────────────
-      <img src="sea.jpg" alt="Aegean sea" />
-    -->
+      <img src="images/beach.png" alt="Aegean sea" />
     <div style="width:100%;height:100%;background:linear-gradient(165deg,#4a7888 0%,#80704a 50%,#2a1e14 100%)"></div>
   </div>
   <div class="fb-veil"></div>
@@ -799,26 +800,26 @@ footer{
 <section id="menu">
   <div class="menu-head rv">
     <div>
-      <span class="section-label">What we serve</span>
+      <span class="section-label">A glimpse of what we serve</span>
       <h2>The <em>Menu</em></h2>
     </div>
-    <div class="menu-tabs">
+    <!-- <div class="menu-tabs">
       <button class="tab-btn on" data-tab="sea">Sea</button>
       <button class="tab-btn" data-tab="land">Land</button>
       <button class="tab-btn" data-tab="drinks">Drinks</button>
-    </div>
+    </div> -->
   </div>
 
   <div class="menu-grid on rv" id="tab-sea" style="transition-delay:.1s">
-    <div class="mi"><div><div class="mi-name">Grilled Octopus</div><div class="mi-desc">Caperberries, smoked oil, charred lemon</div></div><div class="mi-price">16 €</div></div>
-    <div class="mi"><div><div class="mi-name">Sea Bass Crudo</div><div class="mi-desc">Aegean salt, cold-pressed olive oil, dill</div></div><div class="mi-price">18 €</div></div>
-    <div class="mi"><div><div class="mi-name">Whole Grilled Fish</div><div class="mi-desc">Morning catch, wild herbs, sea salt</div></div><div class="mi-price">Market</div></div>
-    <div class="mi"><div><div class="mi-name">Prawn Saganaki</div><div class="mi-desc">Tomato, Thassos feta, a splash of ouzo</div></div><div class="mi-price">19 €</div></div>
-    <div class="mi"><div><div class="mi-name">Smoked Sardine Toast</div><div class="mi-desc">Sourdough, caper cream, pickled shallot</div></div><div class="mi-price">12 €</div></div>
-    <div class="mi"><div><div class="mi-name">Lobster Pasta</div><div class="mi-desc">Local lobster, cherry tomato, basil oil</div></div><div class="mi-price">28 €</div></div>
+    <div class="mi"><div><div class="mi-name">Spanakopita Salad</div><div class="mi-desc">Spinach, feta, crispy phyllo, lemon dressing</div></div><div class="mi-price">13 €</div></div>
+    <div class="mi"><div><div class="mi-name">Homemade Pork Gyros</div><div class="mi-desc">Pita bread, tomato, onion, tzatziki, potatoes</div></div><div class="mi-price">13.50 €</div></div>
+    <div class="mi"><div><div class="mi-name">Ocean Linguini</div><div class="mi-desc">Caviar, mussels, lemon, cream</div></div><div class="mi-price">17 €</div></div>
+    <div class="mi"><div><div class="mi-name">"Skewer" belly bites</div><div class="mi-desc">Honey glazed pork, potato chips, sesame, ginger</div></div><div class="mi-price">15 €</div></div>
+    <div class="mi"><div><div class="mi-name">Beef Cheecks</div><div class="mi-desc">Paccheri pasta, bechamel, cherry tomato</div></div><div class="mi-price">18 €</div></div>
+    <div class="mi"><div><div class="mi-name">Fried crispy calamari</div><div class="mi-desc">ajoli mayonnaise, potato chips</div></div><div class="mi-price">14 €</div></div>
   </div>
 
-  <div class="menu-grid" id="tab-land">
+  <!-- <div class="menu-grid" id="tab-land">
     <div class="mi"><div><div class="mi-name">Stello Salad</div><div class="mi-desc">Heirloom tomato, feta, basil, sea salt</div></div><div class="mi-price">12 €</div></div>
     <div class="mi"><div><div class="mi-name">Lamb Chops</div><div class="mi-desc">Mountain herbs, tzatziki, wood fire</div></div><div class="mi-price">22 €</div></div>
     <div class="mi"><div><div class="mi-name">Mezze Platter</div><div class="mi-desc">Hummus, taramosalata, dolmades, pita</div></div><div class="mi-price">14 €</div></div>
@@ -834,7 +835,7 @@ footer{
     <div class="mi"><div><div class="mi-name">Ouzo on Ice</div><div class="mi-desc">As it should be</div></div><div class="mi-price">5 €</div></div>
     <div class="mi"><div><div class="mi-name">Fresh Lemonade</div><div class="mi-desc">Homemade, mint, island honey</div></div><div class="mi-price">5 €</div></div>
     <div class="mi"><div><div class="mi-name">Greek Coffee</div><div class="mi-desc">Traditional or freddo espresso</div></div><div class="mi-price">3.5 €</div></div>
-  </div>
+  </div> -->
 </section>
 
 <!-- ═══ GALLERY ════════════════════════════════════════════════ -->
@@ -859,10 +860,7 @@ footer{
 <!-- ═══ FULL BLEED 2 — SUNSET ═════════════════════════════════ -->
 <div class="fb rv" style="height:65vh">
   <div class="fb-bg">
-    <!--
-      ── IMAGE / VIDEO SLOT 4 — SUNSET ────────────────────────
-      <img src="sunset.jpg" alt="Thassos sunset" />
-    -->
+  <img src="images/sunset.png" alt="Thassos sunset" style="object-position: center 55%" />
     <div style="width:100%;height:100%;background:linear-gradient(to right,#6a3820 0%,#C07838 35%,#E09850 55%,#5a7888 100%)"></div>
   </div>
   <div class="fb-veil" style="background:rgba(26,22,18,.2)"></div>
